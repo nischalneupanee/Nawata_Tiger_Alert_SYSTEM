@@ -18,32 +18,30 @@ To support ongoing research and proactive wildlife management, the system will s
 ## Installation
 
 1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/AnkitDevkota/Tiger-Detection-System.git
-   \`\`\`
+   ```bash
+   git clone https://github.com/nischalneupanee/Nawata_Tiger_Alert_SYSTEM
+   ```
 
 2. Navigate to the project directory:
-   \`\`\`bash
+   ```bash
    cd Tiger-Detection-System
-   \`\`\`
+   ```
 
 3. Install the required packages:
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 ## Usage
 
 1. Start the application:
-   \`\`\`bash
+   ```bash
    python main.py
-   \`\`\`
+   ```
 
 2. The system identifies the tiger through live video. The cameras are generally placed in jungle areas (using already installed national park cameras).
 
 3. The system generates an alert signal and sends it to IoT devices when a tiger is detected near the community.
-
-
 
 Make sure to place the downloaded model in the appropriate directory (`models/`) before running the application.
 
@@ -85,5 +83,5 @@ This project was developed by **Team NAWATA** as part of the **IDEAX Hackathon 2
 
 For any inquiries, feel free to reach out:
 
-1. **Email**: ankitdevkota107@gmail.com
-2. **GitHub**: [Ankit Devkota](https://github.com/AnkitDevkota)
+1. **Email**: contact@nischalneupane.name.np
+
