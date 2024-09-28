@@ -1,0 +1,26 @@
+* {
+    --primary-color: #5EB23F;
+    --secondary-color: #C3E17A;
+    --navbar-height: 70px;
+}
+
+.custom-border {
+    border: 12px solid #C3E17A;
+}
+
+.custom-background {
+    background-image: linear-gradient(to right, rgba(14, 42, 26, 0.7), rgba(98, 137, 41, 0.7)), url('../assets/background_img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+
+.custom-section {
+    height: calc(90vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+}
+

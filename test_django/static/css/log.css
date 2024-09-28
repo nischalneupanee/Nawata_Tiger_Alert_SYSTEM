@@ -1,0 +1,100 @@
+/* Navbar Customization */
+.navbar {
+    background-color: #1f2937; /* Darker background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #0ef; /* Light blue color for active and hover */
+    border-bottom: 2px solid #0ef; /* Indicator for active link */
+}
+
+/* Button in Navbar */
+.nav-btn {
+    color: #ffffff;
+    background-color: #0ef; /* Matching primary color for button */
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #1f2937; /* Darker background for hover */
+    color: #0ef; /* Color change on hover */
+    border: 2px solid #0ef;
+}
+
+/* Navbar responsiveness */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Navbar toggler custom icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="%23ffffff" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3 12.5a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1H3zM2.5 8a.5.5 0 0 1 .5.5h10a.5.5 0 0 1 0-1h-10a.5.5 0 0 1-.5.5zm0-4.5a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1h-10z"/></svg>');
+}
+
+
+.log-section {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 2rem;
+}
+
+.log-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.log-section li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.log-section li:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+    /* Adjust height for smaller screens */
+    .map-container {
+        height: 300px;
+    }
+
+    .date-selection {
+        margin-top: 1rem;
+    }
+}
+
+body{
+    background: #323946;
+}
+
+.log-section-heading {
+    background-color: #fff;  /* White background for heading */
+    color: #000;             /* Dark text for contrast */
+    padding: 10px 15px;      /* Padding to make it stand out */
+    border-radius: 5px;      /* Rounded corners */
+    margin-bottom: 15px;     /* Space below heading */
+    font-weight: 600;        /* Bold heading */
+    font-size: 1.25rem;      /* Slightly larger font */
+}

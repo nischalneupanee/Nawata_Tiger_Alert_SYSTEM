@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: cover;
+        }
+        .verify-btn {
+            padding: 8px 12px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .verify-btn:hover {
+            background-color: #4cae4c;
+        }
+        .verified {
+            color: #5cb85c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact No</th>
+                    <th>Occupation</th>
+                    <th>Reason for Membership</th>
+                    <th>Identity Proof</th>
+                    <th>Uploaded At</th>
+                    <th>Verification Status</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            {% for member in members %}
+                <tr>
+                    <td>{{ member.Name }}</td>
+                    <td>{{ member.Contact_no }}</td>
+                    <td>{{ member.occupation }}</td>
+                    <td>{{ member.Reason_for_membership }}</td>
+                    <td><img src="{{ member.identity.url }}" alt="Identity Proof"></td>
+                    <td>{{ member.uploaded_at|date:"F d, Y H:i" }}</td>
+                    <td>
+                        {% if member.verified %}
+                            <span class="verified">Verified</span>
+                        {% else %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <button type="submit"><a href="{% url 'accounts:verify_user' member.id %}">Verify</a></button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
