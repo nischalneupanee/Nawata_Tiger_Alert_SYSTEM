@@ -36,7 +36,7 @@ To support ongoing research and proactive wildlife management, the system will s
 
 1. Start the application:
    ```bash
-   python main.py
+   daphne -p 8000 test_django.asgi:application
    ```
 
 2. The system identifies the tiger through live video. The cameras are generally placed in jungle areas (using already installed national park cameras).
