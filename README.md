@@ -83,5 +83,5 @@ This project was developed by **Team NAWATA** as part of the **IDEAX Hackathon 2
 
 For any inquiries, feel free to reach out:
 
-1. **Email**: contact@nischalneupane.name.np
+1. **Email**: nischalneupane439@gmail.com
 
